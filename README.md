@@ -1,19 +1,32 @@
 # bmi_stopwatch_todo
 
-A new Flutter project.
+## 1.BMI
 
-## Getting Started
+### 기능
 
-This project is a starting point for a Flutter application.
+- 키와 몸무게를 입력하고 결과 보기 버튼을 누르면 다른 화면에서 비만도 결과를 문자와 아이콘으로 보여 줍니다.
 
-A few resources to get you started if this is your first Flutter project:
+### check point!
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- `Form.TextFormField.GlobalKey` 를 사용하면 입력 폼의 에러를 간단히 검증할 수 있습니다
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- `TextFormField` 위젯은 `TextField` 위젯으 지능에 추가로 오류 검증 로직을 추가할 수 있는 위젯입니다.
+
+- `TextFormField` 나 `TextField` 위젯에 입력된 값을 활용하려면 `TextEditingController` 클래스를 사용합니다.
+
+### 주요 코드
+
+#### 1. 클릭시 키보드 감추기
+
+- 키보드 밖으로 클릭 시, 키보드 감추기 (! 해당 경로 최상단 Scaffold 를 warp 하고 GestureDetector 설정)
+
+```dart
+return GestureDetector(
+  onTap: () {
+    FocusScope.of(context).unfocus();
+  },
+  child: Scaffold( ....
+```
 
 ## reference
 

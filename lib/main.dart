@@ -41,36 +41,42 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.white,
-      //   title: Text(
-      //     'BMI / StopWatch / Todo',
-      //     style: TextStyle(color: Colors.black),
-      //   ),
-      // ),
-      body: _pages[_index],
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: (index) {
-          setState(() {
-            _index = index;
-          });
-        },
-        currentIndex: _index,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.no_meals),
-            label: 'BMI',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.watch),
-            label: 'Stop Watch',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.check_box),
-            label: 'Todo List',
-          ),
-        ],
+    // 키보드 밖으로 클릭 시, 키보드 감추기 (! 해당 경로 최상단 Scaffold 를 warp 하고 GestureDetector 설정)
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+      },
+      child: Scaffold(
+        // appBar: AppBar(
+        //   backgroundColor: Colors.white,
+        //   title: Text(
+        //     'BMI / StopWatch / Todo',
+        //     style: TextStyle(color: Colors.black),
+        //   ),
+        // ),
+        body: _pages[_index],
+        bottomNavigationBar: BottomNavigationBar(
+          onTap: (index) {
+            setState(() {
+              _index = index;
+            });
+          },
+          currentIndex: _index,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.no_meals),
+              label: 'BMI',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.watch),
+              label: 'Stop Watch',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.check_box),
+              label: 'Todo List',
+            ),
+          ],
+        ),
       ),
     );
   }
