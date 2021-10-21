@@ -1,4 +1,6 @@
-# bmi_stopwatch_todo
+# bmi_stopwatch_todoList
+
+![Kapture 2021-10-21 at 14 51 28](https://user-images.githubusercontent.com/28912774/138219473-6724db55-1a0a-4031-a6e1-d91d950531ce.gif)
 
 ## 1.BMI
 
