@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "894627910087",
+    "project_id": "my-todo-list-9c418",
+    "storage_bucket": "my-todo-list-9c418.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894627910087:android:14b41367c99ba40c2d89e2",
+        "android_client_info": {
+          "package_name": "com.example.bmi_stopwatch_todo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894627910087-l9ukjbhopf71o16kc756gjog01sd1tfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqJ3E9erCJimVisLp_suMHsSTYnqmgGLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894627910087-l9ukjbhopf71o16kc756gjog01sd1tfg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

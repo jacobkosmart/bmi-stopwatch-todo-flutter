@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'bmi/bmi.dart';
 import 'stopWatch/stop_watch.dart';
 import 'todo/todo.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(); // Firebase 초기화
   runApp(const MyApp());
 }
 
