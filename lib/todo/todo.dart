@@ -27,7 +27,7 @@ class _TodoState2 extends State<Todo2> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           'Todo List',
           style: TextStyle(color: Colors.black),
         ),
@@ -36,7 +36,7 @@ class _TodoState2 extends State<Todo2> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: <Widget>[
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               children: <Widget>[
                 // TodoList 작성 textField
@@ -50,7 +50,7 @@ class _TodoState2 extends State<Todo2> {
                     onSubmitted: (String title) {
                       _addTodo(Todo(title));
                     },
-                    autofocus: true,
+                    autofocus: false,
                   ),
                 ),
                 SizedBox(width: 10),

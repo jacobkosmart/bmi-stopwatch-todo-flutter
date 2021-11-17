@@ -1,8 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bmi_stopwatch_todo">
+   <uses-permission android:name="android.permission.INTERNET" /> 
    <application
-        android:label="bmi_stopwatch_todo"
-        android:icon="@mipmap/ic_launcher">
+        android:label="BST(BMI/Watch/Todo)"
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

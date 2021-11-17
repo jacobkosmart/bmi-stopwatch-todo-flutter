@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'BST(BMI/Watch/Todo)',
       theme: ThemeData(
         primaryColor: Colors.blue,
       ),

@@ -1,5 +1,7 @@
 # bmi_stopwatch_todoList
 
+[Live Demo by Web](https://bst.jacobko.info/)
+
 ![Kapture 2021-10-21 at 14 51 28](https://user-images.githubusercontent.com/28912774/138219473-6724db55-1a0a-4031-a6e1-d91d950531ce.gif)
 
 ## 1.BMI
@@ -258,6 +260,71 @@ void _addTodo(Todo todo) {
 
 #### 할일 삭제 (Delete)
 
+```dart
+
+// 할일 삭제 메서드
+// 삭제 시에도 문서 ID 가 필요하기에 Todo 가 아닌 DocumentSnapshot 을 인수로 받고 delete() 로 데이터 삭제함
+void _deleteTodo(DocumentSnapshot doc) {
+  FirebaseFirestore.instance.collection('todo').doc(doc.id).delete();
+}
+```
+
+## 4.Splash page 만들기
+
+- splash page 란, app 초기에 로딩 화면을 만들어서 home 화면이 나오기 전까지 나타 내주는 일종의 로딩 페이지 임
+
+### flutter_native_splash package 사용
+
+> [flutter_native_splash](https://pub.dev/packages/flutter_native_splash)
+
+#### flutter_native_splash 설치
+
+`flutter pub add flutter_native_splash --dev`
+
+#### 스플래시 이미지 설정
+
+`pubspec.yaml` 하단에 다음 예시와 같이 splash image 설정을 함
+
+```yaml
+
+// .........
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/splash.png
+  fullscreen: true
+```
+
+#### flutter_native_splash 패키지 옵션
+
+flutter_native_splash 패키지는 다양한 옵션을 가지고 있습니다
+
+- color: 스플래시 스크린의 배경색
+
+- background_image: 스플래시 스크린의 배경 이미지
+
+- image: 스플래시 스크린의 이미지
+
+- color_dark: 디바이스 설정이 다크 모드일 경우의 배경색
+
+- background_image_dark: 디바이스 설정이 다크 모드일 경우의 배경 이미지
+
+- image_dark: 디바이스 설정이 다크 모드일 경우의 스플래시 스크린 이미지
+  android_gravity: 안드로이드에서 스플래시 이미지의 위치를 설정합니다. (bottom, center, center_horizontal, center_vertical, clip_horizontal, clip_vertical, end, fill, fill_horizontal, fill_vertical, left, right, start, top)
+
+- ios_content_mode: iOS에서 스플래시 이미지의 위치를 설정합니다. (scaleToFill, scaleAspectFit, scaleAspectFill, center, top, bottom, left, right, topLeft, topRight, bottomLeft, bottomRight)
+
+- web_image_mode: 웹에서 스플래시 이미지의 위치를 설정합니다. (center, contain, stretch, cover)
+  fullscreen: 스플래시 스크린을 전체 화면으로 표시할지 여부(true, false)
+
+- info_plist_files: info.plist 이름을 변경한 경우, 해당 파일을 설정하기 위한 옵션
+
+#### 스플래시 이미지 생성
+
+- 옵션 설정을 마치고 아래의 명령어를 실행하면 splash image 가 생성됨
+
+`flutter pub run flutter_native_splash:create`
+
 ## reference
 
 Flutter cookbook - [https://flutter.dev/docs/cookbook](https://flutter.dev/docs/cookbook)
@@ -265,3 +332,5 @@ Flutter cookbook - [https://flutter.dev/docs/cookbook](https://flutter.dev/docs/
 오준석의 생존코딩 - [https://book.jacobko.info/#/book/1162244372](https://book.jacobko.info/#/book/1162244372)
 
 플러터로 세계정복 - [https://muhly.tistory.com/24](https://muhly.tistory.com/24)
+
+Deku - [https://dev-yakuza.posstree.com/ko/flutter/splash-screen/](https://dev-yakuza.posstree.com/ko/flutter/splash-screen/)
