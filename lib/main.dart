@@ -1,7 +1,7 @@
+import 'package:bmi_stopwatch_todo/dashboard/dashboard.dart';
+import 'package:bmi_stopwatch_todo/dashboard/dashboard_binding.dart';
 import 'package:flutter/material.dart';
-import 'bmi/bmi.dart';
-import 'stopWatch/stop_watch.dart';
-import 'todo/todo.dart';
+import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
@@ -16,18 +16,28 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'BST(BMI/Watch/Todo)',
       theme: ThemeData(
         primaryColor: Colors.blue,
       ),
-      home: const Home(),
+      initialRoute: "/",
+      initialBinding: DashboardBinding(),
+      getPages: [
+        GetPage(
+          name: "/",
+          page: () => MyDashBoard(),
+        )
+      ],
     );
   }
 }
 
-class Home extends StatefulWidget {
+
+
+// Previous Code (before updating GetX bottom Nav)
+/* class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
@@ -84,3 +94,4 @@ class _HomeState extends State<Home> {
     );
   }
 }
+*/

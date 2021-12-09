@@ -1,8 +1,18 @@
-# bmi_stopwatch_todoList
+## bmi_stopwatch_todoList
 
 [Live Demo by Web](https://bst.jacobko.info/)
 
 ![Kapture 2021-10-21 at 14 51 28](https://user-images.githubusercontent.com/28912774/138219473-6724db55-1a0a-4031-a6e1-d91d950531ce.gif)
+
+## Update Log
+
+V.1.0.1 : Code Refactoring and update some features
+
+- Adapted GetX statement and controller
+
+- Animated nested navigation
+
+V.1.0.0 : initial project
 
 ## 1.BMI
 

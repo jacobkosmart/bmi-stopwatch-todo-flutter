@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class BimResult extends StatefulWidget {
+class BMIResult extends StatefulWidget {
   final double height;
   final double weight;
 
   //  BMI constructor
-  BimResult(this.height, this.weight);
+  BMIResult(this.height, this.weight);
 
   @override
-  State<BimResult> createState() => _BimResultState();
+  State<BMIResult> createState() => _BMIResultState();
 }
 
-class _BimResultState extends State<BimResult> {
+class _BMIResultState extends State<BMIResult> {
   @override
   Widget build(BuildContext context) {
     // weight 를 height 의 제곱으로 나누면 BMI 갑이 됨. 키 단위가 m (미터) 이기 때문에 100 으로 각가 나눔
